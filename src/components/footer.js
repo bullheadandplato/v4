@@ -10,7 +10,6 @@ const StyledFooter = styled.footer`
   height: auto;
   min-height: 70px;
   padding: 15px;
-  text-align: center;
 `;
 
 const StyledSocialLinks = styled.div`
@@ -32,6 +31,7 @@ const StyledSocialLinks = styled.div`
 
     a {
       padding: 10px;
+      width: 100%;
       svg {
         width: 20px;
         height: 20px;
@@ -73,10 +73,12 @@ const Footer = () => {
         </ul>
       </StyledSocialLinks>
 
+
       <StyledCredit tabindex="-1">
+        <a href={'#'}>bullhead.dev</a>
         <a href="https://github.com/bchiang7/v4" target={"_blank"}>
           <div>
-            <span>Theme Author</span>
+            <span>Theme</span>
             <Icon name={"External"}/>
           </div>
         </a>
