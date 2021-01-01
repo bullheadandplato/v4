@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
+import {Helmet} from 'react-helmet';
+import {useLocation} from '@reach/router';
+import {graphql, useStaticQuery} from 'gatsby';
 
 // https://www.gatsbyjs.com/docs/add-seo-component/
 
@@ -18,7 +18,6 @@ const Head = ({ title, description, image }) => {
             defaultDescription: description
             siteUrl
             defaultImage: image
-            twitterUsername
           }
         }
       }

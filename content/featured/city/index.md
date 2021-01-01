@@ -1,6 +1,6 @@
 ---
 date: '2'
-title: ' City Express-Livraison'
+title: 'City Express-Livraison'
 cover: './city.png'
 external: 'https://apps.apple.com/tr/app/city-express-livraison/id1516084975'
 tech:
