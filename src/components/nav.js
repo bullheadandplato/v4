@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import React, {useEffect, useState} from 'react';
+import {Link} from 'gatsby';
 import PropTypes from 'prop-types';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled, { css } from 'styled-components';
-import { navLinks } from '@config';
-import { loaderDelay } from '@utils';
-import { useScrollDirection } from '@hooks';
-import { Menu } from '@components';
-import { IconLogo } from '@components/icons';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import styled, {css} from 'styled-components';
+import {navLinks} from '@config';
+import {loaderDelay} from '@utils';
+import {useScrollDirection} from '@hooks';
+import {Menu} from '@components';
+import {IconLogo} from '@components/icons';
 
 const StyledHeader = styled.header`
-  ${({ theme }) => theme.mixins.flexBetween};
+  ${({theme}) => theme.mixins.flexBetween};
   position: fixed;
   top: 0;
   z-index: 11;
@@ -187,21 +187,6 @@ const Nav = ({ isHome }) => {
             </TransitionGroup>
           </ol>
 
-          <TransitionGroup component={null}>
-            {isMounted && (
-              <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                  <a
-                    className="resume-button"
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Resume
-                  </a>
-                </div>
-              </CSSTransition>
-            )}
-          </TransitionGroup>
         </StyledLinks>
 
         <TransitionGroup component={null}>

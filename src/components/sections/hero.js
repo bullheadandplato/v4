@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React, {useEffect, useState} from 'react';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import styled from 'styled-components';
-import { email } from '@config';
-import { navDelay, loaderDelay } from '@utils';
+import {email} from '@config';
+import {loaderDelay, navDelay} from '@utils';
 
 const StyledHeroSection = styled.section`
-  ${({ theme }) => theme.mixins.flexCenter};
+  ${({theme}) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
@@ -47,13 +47,14 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const one = <h1>Hi, I am</h1>;
+  const two = <h2 className="big-heading">bullhead.</h2>;
+  const three = <h3 className="big-heading">I build mobile applications and <i>things</i> for the web.</h3>;
   const four = (
     <p>
-      I'm a software engineer based in Boston, MA specializing in building (and occasionally
-      designing) exceptional websites, applications, and everything in between.
+      I'm a software engineer based in Lahore, Pakistan (currently in Denizli, Turkey) specializing in building (and
+      occasionally
+      designing) exceptional apis, mobile applications, and everything in between.
     </p>
   );
   const five = (
