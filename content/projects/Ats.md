@@ -15,4 +15,4 @@ tech:
 showInProjects: true
 ---
 
-News channels app crafted from youtube data api.
+Vehicle tracking system. Receive data from three different type of tracking device using Spring Integration components. Kafka forward data to application server from where it's updated on the website and mobile apps in realtime using Stomp sockets.
