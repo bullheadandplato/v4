@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, {useEffect, useRef} from 'react';
+import {graphql, useStaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { srConfig } from '@config';
+import {srConfig} from '@config';
 import sr from '@utils/sr';
 
 const StyledAboutSection = styled.section`
@@ -116,7 +116,7 @@ const StyledPic = styled.div`
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.jpg" }) {
+      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.PNG" }) {
         childImageSharp {
           fluid(maxWidth: 500, traceSVG: { color: "#64ffda" }) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'Vue', 'Node.js', 'WordPress'];
+  const skills = ['Java', 'Spring Framework', 'Android', 'iOS', 'React'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,7 +141,7 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
+            <p>Hello! I'm bullhead, a software engineer based in Lahore, Pakistan.</p>
 
             <p>
               I enjoy creating things that live on the internet, whether that be websites,
@@ -150,10 +150,10 @@ const About = () => {
             </p>
 
             <p>
-              Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Northeastern University</a>, I joined the
-              engineering team at <a href="https://www.upstatement.com">Upstatement</a> where I work
-              on a wide variety of interesting and meaningful projects on a daily basis.
+              While studying at{' '}
+              <a href="https://uog.edu.pk">University Of Gujrat</a>, I started my professional
+              career as a freelancer. I work on a wide variety of interesting
+              and meaningful projects on a daily basis.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
