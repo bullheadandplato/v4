@@ -11,6 +11,7 @@ const StyledProjectsSection = styled.section`
   flex-direction: column;
   align-items: center;
 
+
   h2 {
     font-size: clamp(24px, 5vw, var(--fz-heading));
   }
@@ -25,7 +26,7 @@ const StyledProjectsSection = styled.section`
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 15px;
     position: relative;
     margin-top: 50px;
@@ -35,10 +36,6 @@ const StyledProjectsSection = styled.section`
     }
   }
 
-  .more-button {
-    ${({ theme }) => theme.mixins.button};
-    margin: 80px auto 0;
-  }
 `;
 
 const StyledProject = styled.div`
@@ -165,7 +162,6 @@ const Projects = () => {
     }
   `);
 
-  const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
@@ -178,8 +174,7 @@ const Projects = () => {
 
   const GRID_LIMIT = 6;
   const projects = data.projects.edges.filter(({ node }) => node);
-  const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? projects : firstSix;
+  const projectsToShow = projects.slice(0, GRID_LIMIT);
 
   return (
     <StyledProjectsSection>
@@ -252,9 +247,6 @@ const Projects = () => {
           })}
       </TransitionGroup>
 
-      <button className="more-button" onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
-      </button>
     </StyledProjectsSection>
   );
 };
