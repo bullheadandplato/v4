@@ -9,9 +9,7 @@ external: ''
 tech:
   - Spring Framework
   - Java
-  - Swift
-  - Kafka
-  - React
+  - Android SDK
 showInProjects: true
 ---
 
